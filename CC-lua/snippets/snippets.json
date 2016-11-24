@@ -1,0 +1,1096 @@
+{
+	"if": {
+		"prefix": "if",
+		"body": "if ${1:condition} then\n\t${0:-- body}\nend",
+		"description": "if",
+		"scope": "source.lua"
+	},
+	"ifel": {
+		"prefix": "ifel",
+		"body": "if ${1:condition} then\n\t${2:-- body}\nelse\n\t${0:-- body}\nend",
+		"description": "ifel",
+		"scope": "source.lua"
+	},
+	"elif": {
+		"prefix": "elif",
+		"body": "elseif ${1:condition} then\n\t${0:-- body}\n",
+		"description": "elif",
+		"scope": "source.lua"
+	},
+	"fori": {
+		"prefix": "fori",
+		"body": "for ${1:i},${2:v} in ipairs(${3:table_name}) do\n\t${0:print(i,v)}\nend",
+		"description": "for i,v in ipairs()",
+		"scope": "source.lua"
+	},
+	"for": {
+		"prefix": "for",
+		"body": "for ${1:i}=${2:1},${3:10} do\n\t${0:print(i)}\nend",
+		"description": "for i=1,10",
+		"scope": "source.lua"
+	},
+	"forp": {
+		"prefix": "forp",
+		"body": "for ${1:k},${2:v} in pairs(${3:table_name}) do\n\t${0:print(k,v)}\nend",
+		"description": "for k,v in pairs()",
+		"scope": "source.lua"
+	},
+	"fun": {
+		"prefix": "fun",
+		"body": "function ${1:function_name}( ${2:...} )\n\t${0:-- body}\nend",
+		"description": "function",
+		"scope": "source.lua"
+	},
+	"function": {
+		"prefix": "function",
+		"body": "function ${1:function_name}( ${2:...} )\n\t${0:-- body}\nend",
+		"description": "function",
+		"scope": "source.lua"
+	},
+	"local": {
+		"prefix": "local",
+		"body": "local ${1:x} = ${0:1}",
+		"description": "local x = 1",
+		"scope": "source.lua"
+	},
+	"ret": {
+		"prefix": "ret",
+		"body": "return ${1:...}",
+		"description": "return ...",
+		"scope": "source.lua"
+	},
+	"req": {
+		"prefix": "req",
+		"body": "require(\"${1:module}\")",
+		"description": "require()",
+		"scope": "source.lua"
+	},
+	"require": {
+		"prefix": "require",
+		"body": "require(\"${1:module}\")",
+		"description": "require()",
+		"scope": "source.lua"
+	},
+	"ver": {
+		"prefix": "ver",
+		"body": "_VERSION",
+		"description": "_VERSION",
+		"scope": "source.lua"
+	},	
+	"version": {
+		"prefix": "version",
+		"body": "_VERSION",
+		"description": "_VERSION",
+		"scope": "source.lua"
+	},	
+	"assert": {
+		"prefix": "assert",
+		"body": "assert(${1:v}${2:[, message]})",
+		"description": "assert()",
+		"scope": "source.lua"
+	},
+	"collectgarbage": {
+		"prefix": "collectgarbage",
+		"body": "collectgarbage(${1:[opt]}${2:[, arg]})",
+		"description": "collectgarbage()",
+		"scope": "source.lua"
+	},
+	"dofile": {
+		"prefix": "dofile",
+		"body": "dofile(${1:[filename]})",
+		"description": "dofile ([filename])",
+		"scope": "source.lua"
+	},
+	"getmetatable": {
+		"prefix": "getmetatable",
+		"body": "getmetatable(${1:object})",
+		"description": "getmetatable (object)",
+		"scope": "source.lua"
+	},
+	"next": {
+		"prefix": "next",
+		"body": "next(${1:table}${2:[, index]})",
+		"description": "next (table [, index])",
+		"scope": "source.lua"
+	},
+	"print": {
+		"prefix": "print",
+		"body": "print(${1:...})",
+		"description": "print(...)",
+		"scope": "source.lua"
+	},
+	"select": {
+		"prefix": "select",
+		"body": "select(${1:index}, ${2:...})",
+		"description": "select (index, ···)",
+		"scope": "source.lua"
+	},
+	"setmetatable": {
+		"prefix": "setmetatable",
+		"body": "setmetatable(${1:table}, ${2:metatable})",
+		"description": "setmetatable (table, metatable)",
+		"scope": "source.lua"
+	},
+	"tonumber": {
+		"prefix": "tonumber",
+		"body": "tonumber(${1:e}${2:[, base]})",
+		"description": "tonumber (e [, base])",
+		"scope": "source.lua"
+	},
+	"tostring": {
+		"prefix": "tostring",
+		"body": "tostring(${1:v})",
+		"description": "tostring (v)",
+		"scope": "source.lua"
+	},
+	"type": {
+		"prefix": "type",
+		"body": "type(${1:v})",
+		"description": "type (v)",
+		"scope": "source.lua"
+	},
+	
+	"table.concat": {
+		"prefix": "table.concat",
+		"body": "table.concat( ${1:tablename}${2:, \", \"}${3:, start_index}${4:, end_index} )",
+		"description": "table.concat",
+		"scope": "source.lua"
+	},
+	"table.insert": {
+		"prefix": "table.insert",
+		"body": "table.insert( ${1:list},${2: [pos,]}${3: value} )",
+		"description": "table.insert",
+		"scope": "source.lua"
+	},
+	"table.remove": {
+		"prefix": "table.remove",
+		"body": "table.remove( ${1:list},${2: [pos,]} )",
+		"description": "table.remove",
+		"scope": "source.lua"
+	},
+	"table.sort": {
+		"prefix": "table.sort",
+		"body": "table.sort( ${1:tablename}${2:, sortfunction} )",
+		"description": "table.sort",
+		"scope": "source.lua"
+	},
+	
+	"string.byte": {
+		"prefix": "string.byte",
+		"body": "string.byte( ${1:s}${2:[, i]}${3:[, j]} )",
+		"description": "string.byte",
+		"scope": "source.lua"
+	},
+	"string.char": {
+		"prefix": "string.char",
+		"body": "string.char( ${1:...} )",
+		"description": "string.char",
+		"scope": "source.lua"
+	},
+	"string.find": {
+		"prefix": "string.find",
+		"body": "string.find( ${1:s},${2:pattern}${3:[, init]}${4:[, plain]} )",
+		"description": "string.find",
+		"scope": "source.lua"
+	},
+	"string.format": {
+		"prefix": "string.format",
+		"body": "string.format( \"${1:formatstring}\",${2:...} )",
+		"description": "string.format",
+		"scope": "source.lua"
+	},	
+	"string.gmatch": {
+		"prefix": "string.gmatch",
+		"body": "string.gmatch( ${1:s},${2:pattern} )",
+		"description": "string.gmatch",
+		"scope": "source.lua"
+	},	
+	"string.gsub": {
+		"prefix": "string.gsub",
+		"body": "string.gsub( ${1:s},${2:pattern},${3:repl}${4:[, n]} )",
+		"description": "string.gsub",
+		"scope": "source.lua"
+	},
+	"string.sub": {
+		"prefix": "string.sub",
+		"body": "string.sub( ${1:s}, ${2:i}${3:[, j]} )",
+		"description": "string.sub",
+		"scope": "source.lua"
+	},
+	"string.len": {
+		"prefix": "string.len",
+		"body": "string.len( ${1:s} )",
+		"description": "string.len",
+		"scope": "source.lua"
+	},
+	"string.lower": {
+		"prefix": "string.lower",
+		"body": "string.lower( ${1:s} )",
+		"description": "string.lower",
+		"scope": "source.lua"
+	},
+	"string.match": {
+		"prefix": "string.match",
+		"body": "string.match( ${1:s},${2:pattern}${3:[, init]} )",
+		"description": "string.match",
+		"scope": "source.lua"
+	},
+	"string.upper": {
+		"prefix": "string.upper",
+		"body": "string.upper( ${1:s} )",
+		"description": "string.upper",
+		"scope": "source.lua"
+	},
+	"string.rep": {
+		"prefix": "string.rep",
+		"body": "string.rep( ${1:s}, ${2:n}${3:[, rep]} )",
+		"description": "string.rep",
+		"scope": "source.lua"
+	},
+	"string.reverse": {
+		"prefix": "string.reverse",
+		"body": "string.reverse( ${1:s} )",
+		"description": "string.reverse",
+		"scope": "source.lua"
+	},
+	
+	"math.abs": {
+		"prefix": "math.abs",
+		"body": "math.abs( ${1:x} )",
+		"description": "math.abs",
+		"scope": "source.lua"
+	},
+	"math.acos": {
+		"prefix": "math.acos",
+		"body": "math.acos( ${1:x} )",
+		"description": "math.acos",
+		"scope": "source.lua"
+	},
+	"math.asin": {
+		"prefix": "math.asin",
+		"body": "math.asin( ${1:x} )",
+		"description": "math.asin",
+		"scope": "source.lua"
+	},
+	"math.ceil": {
+		"prefix": "math.ceil",
+		"body": "math.ceil( ${1:x} )",
+		"description": "math.ceil",
+		"scope": "source.lua"
+	},
+	"math.cos": {
+		"prefix": "math.cos",
+		"body": "math.cos( ${1:x} )",
+		"description": "math.cos",
+		"scope": "source.lua"
+	},
+	"math.deg": {
+		"prefix": "math.deg",
+		"body": "math.deg( ${1:x} )",
+		"description": "math.deg",
+		"scope": "source.lua"
+	},
+	"math.exp": {
+		"prefix": "math.exp",
+		"body": "math.exp( ${1:x} )",
+		"description": "math.exp",
+		"scope": "source.lua"
+	},
+	"math.floor": {
+		"prefix": "math.floor",
+		"body": "math.floor( ${1:x} )",
+		"description": "math.floor",
+		"scope": "source.lua"
+	},
+	"math.modf": {
+		"prefix": "math.modf",
+		"body": "math.modf( ${1:x} )",
+		"description": "math.modf",
+		"scope": "source.lua"
+	},
+	"math.math.randomseed": {
+		"prefix": "math.math.randomseed",
+		"body": "math.math.randomseed( ${1:x} )",
+		"description": "math.math.randomseed",
+		"scope": "source.lua"
+	},
+	"math.sin": {
+		"prefix": "math.sin",
+		"body": "math.sin( ${1:x} )",
+		"description": "math.sin",
+		"scope": "source.lua"
+	},
+	"math.sqrt": {
+		"prefix": "math.sqrt",
+		"body": "math.sqrt( ${1:x} )",
+		"description": "math.sqrt",
+		"scope": "source.lua"
+	},
+	"math.tan": {
+		"prefix": "math.tan",
+		"body": "math.tan( ${1:x} )",
+		"description": "math.tan",
+		"scope": "source.lua"
+	},
+	"math.tointeger": {
+		"prefix": "math.tointeger",
+		"body": "math.tointeger( ${1:x} )",
+		"description": "math.tointeger",
+		"scope": "source.lua"
+	},
+	"math.type": {
+		"prefix": "math.type",
+		"body": "math.type( ${1:x} )",
+		"description": "math.type",
+		"scope": "source.lua"
+	},
+	"math.random": {
+		"prefix": "math.random",
+		"body": "math.random( ${1:[m]}${2:[, n]} )",
+		"description": "math.random",
+		"scope": "source.lua"
+	},
+	"math.log": {
+		"prefix": "math.log",
+		"body": "math.log( ${1:x}${2:[, base]} )",
+		"description": "math.log",
+		"scope": "source.lua"
+	},
+	"math.max": {
+		"prefix": "math.max",
+		"body": "math.max( ${1:x},${2:...} )",
+		"description": "math.max",
+		"scope": "source.lua"
+	},
+	"math.min": {
+		"prefix": "math.min",
+		"body": "math.min( ${1:x},${2:...} )",
+		"description": "math.min",
+		"scope": "source.lua"
+	},
+	"math.fmod": {
+		"prefix": "math.fmod",
+		"body": "math.fmod( ${1:x},${2:y} )",
+		"description": "math.fmod",
+		"scope": "source.lua"
+	},	
+	"math.atan": {
+		"prefix": "math.atan",
+		"body": "math.atan( ${1:y}${2:[, x]} )",
+		"description": "math.atan",
+		"scope": "source.lua"
+	},	
+	
+	"coroutine.create": {
+		"prefix": "coroutine.create",
+		"body": "coroutine.create( ${1:function} )",
+		"description": "coroutine.create",
+		"scope": "source.lua"
+	},	
+	"coroutine.isyieldable": {
+		"prefix": "coroutine.isyieldable",
+		"body": "coroutine.isyieldable( )",
+		"description": "coroutine.isyieldable",
+		"scope": "source.lua"
+	},
+	"coroutine.resume": {
+		"prefix": "coroutine.resume",
+		"body": "coroutine.resume( ${1:co}${2:[, val1, ···]} )",
+		"description": "coroutine.resume",
+		"scope": "source.lua"
+	},	
+	"coroutine.running": {
+		"prefix": "coroutine.running",
+		"body": "coroutine.running( )",
+		"description": "coroutine.running",
+		"scope": "source.lua"
+	},
+	"coroutine.status": {
+		"prefix": "coroutine.status",
+		"body": "coroutine.status( ${1:co} )",
+		"description": "coroutine.status",
+		"scope": "source.lua"
+	},	
+	"coroutine.wrap": {
+		"prefix": "coroutine.wrap",
+		"body": "coroutine.wrap( ${1:function} )",
+		"description": "coroutine.wrap",
+		"scope": "source.lua"
+	},
+	"coroutine.yield": {
+		"prefix": "coroutine.yield",
+		"body": "coroutine.yield( ${1:...} )",
+		"description": "coroutine.yield",
+		"scope": "source.lua"
+	},
+	
+	"turtle.craft": {
+		"prefix": "turtle.craft",
+		"body": "turtle.craft( ${1:f})",
+		"description": "turtle.craft(f)",
+		"scope": "source.lua"
+	},
+	"turtle.forward": {
+		"prefix": "turtle.forward",
+		"body": "turtle.forward()",
+		"description": "Try to move the turtle forward\nturtle.forward()",
+		"scope": "source.lua"
+	},
+	"turtle.back": {
+		"prefix": "turtle.back",
+		"body": "turtle.back()",
+		"description": "Try to move the turtle backward\nturtle.back()",
+		"scope": "source.lua"
+	},
+	"turtle.up": {
+		"prefix": "turtle.up",
+		"body": "turtle.up()",
+		"description": "Try to move the turtle Upwards\nturtle.up()",
+		"scope": "source.lua"
+	},
+	"turtle.down": {
+		"prefix": "turtle.down",
+		"body": "turtle.down()",
+		"description": "Try to move the turtle Downwards\nturtle.down()",
+		"scope": "source.lua"
+	},
+	"turtle.turnLeft": {
+		"prefix": "turtle.turnLeft",
+		"body": "turtle.turnLeft()",
+		"description": "Turn the turtle left\nturtle.turnLeft()",
+		"scope": "source.lua"
+	},
+	"turtle.turnRight": {
+		"prefix": "turtle.turnRight",
+		"body": "turtle.turnRight()",
+		"description": "Turn the turtle right\nturtle.turnRight()",
+		"scope": "source.lua"
+	},
+	"turtle.select": {
+		"prefix": "turtle.select()",
+		"body": "turtle.select(${1:SlotNumber})",
+		"description": "Make the turtle select slot slotNum first 1 last 16\nturtle.select(f)",
+		"scope": "source.lua"
+	},
+	"turtle.getSelectedSlot": {
+		"prefix": "turtle.getSelectedSlot()",
+		"body": "turtle.getSelectedSlot()",
+		"description": "Returns the Value of the Selected Slot",
+		"scope": "source.lua"
+	},
+	"turtle.getItemCount": {
+		"prefix": "turtle.getItemCount()",
+		"body": "turtle.getItemCount(${1:SlotNumber})",
+		"description": "Returns the Value of the Items form the Selected Slot\nOr from the Choosen",
+		"scope": "source.lua"
+	},
+	"turtle.getItemSpace": {
+		"prefix": "turtle.getItemSpace()",
+		"body": "turtle.getItemSpace(${1:SlotNumber})",
+		"description": "Returns the Value of the Items taht can\n jet be Placed in this slot from the Selected Slot\nOr from the Choosen",
+		"scope": "source.lua"
+	},
+	"turtle.getItemDetail": {
+		"prefix": "turtle.getItemDetail()",
+		"body": "turtle.getItemDetail(${1:SlotNumber})",
+		"description": "Returns the id and the Meta form the Block in the \n Selected Slot or form the Choosen",
+		"scope": "source.lua"
+	},
+	"turtle.equipLeft": {
+		"prefix": "turtle.equipLeft()",
+		"body": "turtle.equipLeft()",
+		"description": "Equipts an item form the Slected Slot Left",
+		"scope": "source.lua"
+	},
+	"turtle.equipRight": {
+		"prefix": "turtle.equipRight()",
+		"body": "turtle.equipRight()",
+		"description": "Equipts an item form the Slected Slot Right",
+		"scope": "source.lua"
+	},
+	"turtle.attack": {
+		"prefix": "turtle.attack()",
+		"body": "turtle.attack()",
+		"description": "Hits The Objekt forward to The trutle",
+		"scope": "source.lua"
+	},
+	"turtle.attackUp": {
+		"prefix": "turtle.attackUp()",
+		"body": "turtle.attackUp()",
+		"description": "Hits The Objekt Above to The trutle",
+		"scope": "source.lua"
+	},
+	"turtle.attackDown": {
+		"prefix": "turtle.attackDown()",
+		"body": "turtle.attackDown()",
+		"description": "Hits The Objekt Under to The trutle",
+		"scope": "source.lua"
+	},
+	"turtle.dig": {
+		"prefix": "turtle.dig()",
+		"body": "turtle.dig()",
+		"description": "Trys to Break the Block in Front of the Turtle",
+		"scope": "source.lua"
+	},
+	"turtle.digUp": {
+		"prefix": "turtle.digUp()",
+		"body": "turtle.digUp()",
+		"description": "Trys to Break the Block in Above of the Turtle",
+		"scope": "source.lua"
+	},
+	"turtle.digDown": {
+		"prefix": "turtle.digDown()",
+		"body": "turtle.digDown()",
+		"description": "Trys to Break the Block in Under of the Turtle",
+		"scope": "source.lua"
+	},
+	"turtle.place": {
+		"prefix": "turtle.place()",
+		"body": "turtle.place(${1:text})",
+		"description": "Sets Selected block in front of the turtle\nWhit a Sign there can be an Parameter Text",
+		"scope": "source.lua"
+	},
+	"turtle.placeUp": {
+		"prefix": "turtle.placeUp()",
+		"body": "turtle.placeUp()",
+		"description": "Sets Selected block  Above the turtle",
+		"scope": "source.lua"
+	},
+	"turtle.placeDown": {
+		"prefix": "turtle.placeDown()",
+		"body": "turtle.placeDown()",
+		"description": "Sets Selected block Under the turtle",
+		"scope": "source.lua"
+	},
+	"turtle.detect": {
+		"prefix": "turtle.detect()",
+		"body": "turtle.detect()",
+		"description": "Detects if a Block is in fornt of the turtle returns true",
+		"scope": "source.lua"
+	},
+	"turtle.detectUp": {
+		"prefix": "turtle.detectUp()",
+		"body": "turtle.detectUp()",
+		"description": "Detects if a Block is in Above the turtle returns true",
+		"scope": "source.lua"
+	},
+	"turtle.detectDown": {
+		"prefix": "turtle.detectDown()",
+		"body": "turtle.detectDown()",
+		"description": "Detects if a Block is in Above the turtle returns true",
+		"scope": "source.lua"
+	},
+	"turtle.inspect": {
+		"prefix": "turtle.inspect()",
+		"body": "turtle.inspect()",
+		"description": "Returns the Data from the Block in fornt of the Turtle",
+		"scope": "source.lua"
+	},
+	"turtle.inspectUp": {
+		"prefix": "turtle.inspectUp()",
+		"body": "turtle.inspectUp()",
+		"description": "Returns the Data from the Block Above the Turtle",
+		"scope": "source.lua"
+	},
+	"turtle.inspectDown": {
+		"prefix": "turtle.inspectDown()",
+		"body": "turtle.inspectDown()",
+		"description": "Returns the Data from the Block Under the Turtle",
+		"scope": "source.lua"
+	},
+	"turtle.compare": {
+		"prefix": "turtle.compare()",
+		"body": "turtle.compare()",
+		"description": "Returns true if the Block in front is the Same as in the Slot",
+		"scope": "source.lua"
+	},
+	"turtle.compareUp": {
+		"prefix": "turtle.compareUp()",
+		"body": "turtle.compareUp()",
+		"description": "Returns true if the Block Above is the Same as in the Slot",
+		"scope": "source.lua"
+	},
+	"turtle.compareDown": {
+		"prefix": "turtle.compareDown()",
+		"body": "turtle.compareDown()",
+		"description": "Returns true if the Block Under the turtle is the Same as in the Slot",
+		"scope": "source.lua"
+	},
+	"turtle.compareTo": {
+		"prefix": "turtle.compareTo()",
+		"body": "turtle.compareTo(${1:f})",
+		"description": "Returns true if the Block Under the turtle is the\n Same as in the Selected Slot",
+		"scope": "source.lua"
+	},
+	"turtle.suck": {
+		"prefix": "turtle.suck()",
+		"body": "turtle.suck(${1:Amount})",
+		"description": "Picks up an item stack of any number",
+		"scope": "source.lua"
+	},
+	"turtle.suckUp": {
+		"prefix": "turtle.suckUp()",
+		"body": "turtle.suckUp(${1:Amount})",
+		"description": "Picks up an item stack of any number Above the trutle",
+		"scope": "source.lua"
+	},
+	"turtle.suckDown": {
+		"prefix": "turtle.suckDown()",
+		"body": "turtle.suckDown(${1:Amount})",
+		"description": "Picks up an item stack of any number Under the trutle",
+		"scope": "source.lua"
+	},
+	"turtle.refuel": {
+		"prefix": "turtle.refuel()",
+		"body": "turtle.suckDown(${1:Coal_amount})",
+		"description": "Adds Fuel to the Turtle -> Amount f",
+		"scope": "source.lua"
+	},
+	"turtle.getFuelLimit": {
+		"prefix": "turtle.getFuelLimit()",
+		"body": "turtle.getFuelLimit()",
+		"description": "Returns the Fuel Limit",
+		"scope": "source.lua"
+	},
+	"turtle.transferTo": {
+		"prefix": "turtle.transferTo()",
+		"body": "turtle.getFuelLimit(${1:ItemName},${2:SlotNumber})",
+		"description": "transfers a Specific item from the Slected to an other Specific Slot",
+		"scope": "source.lua"
+	},
+	
+	"colors.white": {
+		"prefix": "colors.white",
+		"body": "colors.white",
+		"description": "Color White",
+		"scope": "source.lua"
+	},
+	"colors.orange": {
+		"prefix": "colors.orange",
+		"body": "colors.ornage",
+		"description": "Color Orange",
+		"scope": "source.lua"
+	},
+	"colors.white": {
+		"prefix": "colors.magenta",
+		"body": "colors.magenta",
+		"description": "Color magenta",
+		"scope": "source.lua"
+	},
+	"colors.lightBlue": {
+		"prefix": "colors.lightBlue",
+		"body": "colors.lightBlue",
+		"description": "Color lightBlue",
+		"scope": "source.lua"
+	},
+	"colors.yellow": {
+		"prefix": "colors.yellow",
+		"body": "colors.yellow",
+		"description": "Color yellow",
+		"scope": "source.lua"
+	},
+	"colors.lime": {
+		"prefix": "colors.lime",
+		"body": "colors.lime",
+		"description": "Color lime",
+		"scope": "source.lua"
+	},
+	"colors.pink": {
+		"prefix": "colors.pink",
+		"body": "colors.pink",
+		"description": "Color pink",
+		"scope": "source.lua"
+	},
+	"colors.gray": {
+		"prefix": "colors.gray",
+		"body": "colors.gray",
+		"description": "Color gray",
+		"scope": "source.lua"
+	},
+	"colors.lightGray": {
+		"prefix": "colors.lightGray",
+		"body": "colors.lightGray",
+		"description": "Color lightGray",
+		"scope": "source.lua"
+	},
+	"colors.cyan": {
+		"prefix": "colors.cyan",
+		"body": "colors.cyan",
+		"description": "Color cyan",
+		"scope": "source.lua"
+	},
+	"colors.purple": {
+		"prefix": "colors.purple",
+		"body": "colors.purple",
+		"description": "Color purple",
+		"scope": "source.lua"
+	},
+	"colors.blue": {
+		"prefix": "colors.blue",
+		"body": "colors.blue",
+		"description": "Color blue",
+		"scope": "source.lua"
+	},
+	"colors.brown": {
+		"prefix": "colors.brown",
+		"body": "colors.brown",
+		"description": "Color brown",
+		"scope": "source.lua"
+	},
+	"colors.green": {
+		"prefix": "colors.green",
+		"body": "colors.green",
+		"description": "Color green",
+		"scope": "source.lua"
+	},
+	"colors.red": {
+		"prefix": "colors.red",
+		"body": "colors.red",
+		"description": "Color red",
+		"scope": "source.lua"
+	},
+	"colors.black": {
+		"prefix": "colors.black",
+		"body": "colors.black",
+		"description": "Color black",
+		"scope": "source.lua"
+	},
+	
+	
+	
+	
+	
+	
+	"commands.exec": {
+		"prefix": "commands.exec()",
+		"body": "commands.exec(${1:Minecraft_Command})",
+		"description": "Executes a Specific command given in a string",
+		"scope": "source.lua"
+	},
+	"commands.execAsync": {
+		"prefix": "commands.execAsync()",
+		"body": "commands.execAsync(${1:Minecraft_Command})",
+		"description": "Executes a Specific command given in a string Parralel to the Running Progamm",
+		"scope": "source.lua"
+	},
+	"commands.list": {
+		"prefix": "commands.list()",
+		"body": "commands.list()",
+		"description": "Returns Table whit all Commands numerical Indexed",
+		"scope": "source.lua"
+	},
+	"commands.getBlockPosition": {
+		"prefix": "commands.getBlockPosition()",
+		"body": "commands.getBlockPosition()",
+		"description": "Returns the Positon of the Command Computer it Self",
+		"scope": "source.lua"
+	},
+	"commands.getBlockInfo": {
+		"prefix": "commands.getBlockInfo()",
+		"body": "commands.getBlockInfo(${1:X_Cordinate},${1:Y_Cordinate},${1:Z_Cordinate})",
+		"description": "Returns a Table with the Block Data->name,metadata",
+		"scope": "source.lua"
+	},
+	"commands.getBlockInfos": {
+		"prefix": "commands.getBlockInfo()",
+		"body": "commands.getBlockInfo(${1:X_Cordinate},${1:Y_Cordinate},${1:Z_Cordinate},${1:to_X_Cordinate},${1:to_Y_Cordinate},${1:to_Z_Cordinate})",
+		"description": "Returns a Table with the Block Data->name,metadata of the Specific World locations",
+		"scope": "source.lua"
+	},
+	
+	
+	
+	
+	"disk.isPreset": {
+		"prefix": "disk.isPreset()",
+		"body": "disk.isPreset(${1:left/right/top/bottom/forward/back})",
+		"description": "Returns Boolean if a disk is on the Specificated Spot",
+		"scope": "source.lua"
+	},
+	"disk.hasData": {
+		"prefix": "disk.hasData()",
+		"body": "disk.hasData(${1:left/right/top/bottom/forward/back})",
+		"description": "Returns Boolean if a disk whit Data is on the Specificated Spot",
+		"scope": "source.lua"
+	},
+	"disk.getMountPath": {
+		"prefix": "disk.getMountPath()",
+		"body": "disk.getMountPath(${1:left/right/top/bottom/forward/back})",
+		"description": "Returns the MountPath of the Disk(Directory Name)",
+		"scope": "source.lua"
+	},
+	"disk.setLabel": {
+		"prefix": "disk.setLabel()",
+		"body": "disk.setLabel(${1:left/right/top/bottom/forward/back},${2:LabelName})",
+		"description": "Sets the Label of The Disk",
+		"scope": "source.lua"
+	},
+	"disk.getLabel": {
+		"prefix": "disk.getLabel()",
+		"body": "disk.getLabel(${1:left/right/top/bottom/forward/back})",
+		"description": "Gets the Label of the Disk on the Specific Side",
+		"scope": "source.lua"
+	},
+	"disk.getID": {
+		"prefix": "disk.getID()",
+		"body": "disk.getID(${1:left/right/top/bottom/forward/back})",
+		"description": "Returns the Id of the Specific Disk",
+		"scope": "source.lua"
+	},
+	"disk.hasAudio": {
+		"prefix": "disk.hasAudio()",
+		"body": "disk.hasAudio(${1:left/right/top/bottom/forward/back})",
+		"description": "Returns true if there is Music on the Disk",
+		"scope": "source.lua"
+	},
+	"disk.getAudioTitle": {
+		"prefix": "disk.getAudioTitle()",
+		"body": "disk.getAudioTitle(${1:left/right/top/bottom/forward/back})",
+		"description": "Returns The Title of the Music if there is Music on the Disk",
+		"scope": "source.lua"
+	},
+	"disk.playAudio": {
+		"prefix": "disk.playAudio()",
+		"body": "disk.playAudio(${1:left/right/top/bottom/forward/back})",
+		"description": "Playes the Audio File that was on the Disk",
+		"scope": "source.lua"
+	},
+	"disk.stopAudio": {
+		"prefix": "disk.stopAudio()",
+		"body": "disk.stopAudio(${1:left/right/top/bottom/forward/back})",
+		"description": "Stopes the Audio File that was on the Disk",
+		"scope": "source.lua"
+	},
+	"disk.eject": {
+		"prefix": "disk.eject()",
+		"body": "disk.eject(${1:left/right/top/bottom/forward/back})",
+		"description": "Ejects the Disk form the Specific Side",
+		"scope": "source.lua"
+	},
+	
+	
+	
+	
+	
+	"keys.getName": {
+		"prefix": "keys.getName()",
+		"body": "keys.getName(${1:Number_of_Key})",
+		"description": "Gives you the Specific Key Value",
+		"scope": "source.lua"
+	},
+	
+	
+	
+	
+	"multishell.getCurrent": {
+		"prefix": "multishell.getCurrent()",
+		"body": "multishell.getCurrent()",
+		"description": "Returns the ID of the Current Running Tab",
+		"scope": "source.lua"
+	},
+	"multishell.getCount": {
+		"prefix": "multishell.getCount()",
+		"body": "multishell.getCount()",
+		"description": "Returns the Count of Opend Tabs",
+		"scope": "source.lua"
+	},
+	"multishell.launch": {
+		"prefix": "multishell.launch()",
+		"body": "multishell.launch(${1:Environment_table},${2:Programm_path},${3:Arguments_string})",
+		"description": "Returns New Tab id and Runs a New Tab",
+		"scope": "source.lua"
+	},
+	"multishell.setFoucus": {
+		"prefix": "multishell.setFoucus()",
+		"body": "multishell.launch(${1:Tab_number})",
+		"description": "Sets the Foucus to the Specific Tab",
+		"scope": "source.lua"
+	},
+	"multishell.setTitle": {
+		"prefix": "multishell.setTitle()",
+		"body": "multishell.setTitle(${1:Tab_number},${2:String_TabName})",
+		"description": "Sets the TabName of the Specificated Tab",
+		"scope": "source.lua"
+	},
+	"multishell.getTitle": {
+		"prefix": "multishell.getTitle()",
+		"body": "multishell.getTitle(${1:Tab_number})",
+		"description": "Gets the Name of the Given Tab_number",
+		"scope": "source.lua"
+	},
+	"multishell.getFocus": {
+		"prefix": "multishell.getFocus()",
+		"body": "multishell.getFocus(${1:Tab_number})",
+		"description": "Returns the Id of the Current focused Tab",
+		"scope": "source.lua"
+	},
+	
+	
+	
+	"os.version": {
+		"prefix": "os.version()",
+		"body": "os.version()",
+		"description": "Returns the Version of CraftOS or Your OS",
+		"scope": "source.lua"
+	},
+	"os.getComputerID": {
+		"prefix": "os.getComputerID()",
+		"body": "os.getComputerID()",
+		"description": "Returns the ID of the Computer",
+		"scope": "source.lua"
+	},
+	"os.getComputerLabel": {
+		"prefix": "os.getComputerLabel()",
+		"body": "os.getComputerLabel()",
+		"description": "Returns the Label of the Computer",
+		"scope": "source.lua"
+	},
+	"os.setComputerLabel": {
+		"prefix": "os.setComputerLabel()",
+		"body": "os.setComputerLabel(${1:LabelName})",
+		"description": "Sets the Label of the Computer",
+		"scope": "source.lua"
+	},
+	"os.run": {
+		"prefix": "os.run()",
+		"body": "os.run(${1:Environment_table},${2:Programm_path},${3:Arguments_string})",
+		"description": "Runs a Programm at a Specific Environment and with Arguments",
+		"scope": "source.lua"
+	},
+	"os.loadAPI": {
+		"prefix": "os.loadAPI()",
+		"body": "os.loadAPI(${1:path_string})",
+		"description": "Loads an Specific Api",
+		"scope": "source.lua"
+	},
+	"os.unloadAPI": {
+		"prefix": "os.unloadAPI()",
+		"body": "os.unloadAPI(${1:path_string})",
+		"description": "Unloads an Specific Api",
+		"scope": "source.lua"
+	},
+	"os.pullEvent": {
+		"prefix": "os.pullEvent()",
+		"body": "os.pullEvent(${1:Event_type})",
+		"description": "Pulls an Event out of the Que \n-> Specificated by Event_type",
+		"scope": "source.lua"
+	},
+	"os.pullEventRaw": {
+		"prefix": "os.pullEventRaw()",
+		"body": "os.pullEventRaw(${1:Event_type})",
+		"description": "Pulls an Event out of the Que with no Error by CTRL+T \n-> Specificated by Event_type",
+		"scope": "source.lua"
+	},
+	"os.pullEventRaw": {
+		"prefix": "os.pullEventRaw()",
+		"body": "os.pullEventRaw(${1:Event_type})",
+		"description": "Pulls an Event out of the Queue with no Error by CTRL+T \n-> Specificated by Event_type",
+		"scope": "source.lua"
+	},
+	"os.queueEvent": {
+		"prefix": "os.queueEvent()",
+		"body": "os.queueEvent(${1:Event_type},${2:Params})",
+		"description": "Takes an Event to The Queue",
+		"scope": "source.lua"
+	},
+	"os.clock": {
+		"prefix": "os.clock()",
+		"body": "os.clock()",
+		"description": "Returns the amount of time\n since the in-game computer was started",
+		"scope": "source.lua"
+	},
+	"os.startTimer": {
+		"prefix": "os.startTimer()",
+		"body": "os.startTimer(${1:Timeout_number})",
+		"description": "Starts a Timer with a Specific Timeout Returns Timer_number",
+		"scope": "source.lua"
+	},
+	"os.cancelTimer": {
+		"prefix": "os.cancelTimer()",
+		"body": "os.cancelTimer(${1:Timeout_number})",
+		"description": "Starts a Timer with a Specific Timeout",
+		"scope": "source.lua"
+	},
+	"os.time": {
+		"prefix": "os.time()",
+		"body": "os.time()",
+		"description": "Returns Current InGame_time",
+		"scope": "source.lua"
+	},
+	"os.sleep": {
+		"prefix": "os.sleep()",
+		"body": "os.sleep(${1:Sleep_time})",
+		"description": "Sleeps the Specificated amount of Time",
+		"scope": "source.lua"
+	},
+	"os.day": {
+		"prefix": "os.day()",
+		"body": "os.day()",
+		"description": "Returns the Number of the Current InGame_day",
+		"scope": "source.lua"
+	},
+	"os.setAlarm": {
+		"prefix": "os.setAlarm()",
+		"body": "os.setAlarm(${1:Time_number})",
+		"description": "Sets an Alarm on the Specificated Time Returns Alarm_id",
+		"scope": "source.lua"
+	},
+	"os.cancelAlarm": {
+		"prefix": "os.cancelAlarm()",
+		"body": "os.cancelAlarm(${1:Alarm_id})",
+		"description": "Cancels an Alarm on the Specificated Time",
+		"scope": "source.lua"
+	},
+	"os.shutdown": {
+		"prefix": "os.shutdown()",
+		"body": "os.shutdown()",
+		"description": "Shuts the Computer Down",
+		"scope": "source.lua"
+	},
+	"os.reboot": {
+		"prefix": "os.reboot()",
+		"body": "os.reboot()",
+		"description": "Reboots the hole System",
+		"scope": "source.lua"
+	},
+	
+	
+	"parallel.waitForAny": {
+		"prefix": "parallel.waitForAny()",
+		"body": "parallel.waitForAny(${1:Function1},${2:Function2..})",
+		"description": "Runs all the functions at the same time, and stops when any of them returns. ",
+		"scope": "source.lua"
+	},
+	"parallel.waitForAll": {
+		"prefix": "parallel.waitForAll()",
+		"body": "parallel.waitForAll(${1:Function1},${2:Function2..})",
+		"description": "Runs all the functions at the same time, and stops when all of them have returned",
+		"scope": "source.lua"
+	},
+	
+	
+	"class":{
+		"prefix": "class",
+		"body": "function ${1:Class_name}( ${2:params} )\n\tlocal self=\n\t{\n\t\t--Global_Values\n\t}\n\t--[private values\n\n\n\t--]private values\n\n\n\t${4:--Todo Auto Generated Method}\n\n\n\n\treturn self;\nend",
+		"description": "Standart Lua Class via Closure",
+		"scope": "source.lua"
+	}
+	"class.func":{
+		"prefix": "class.func",
+		"body": "\tfunction self.${1:Function_name}(${2:Params})\n\t\t--Todo Auto Generated Method\n\n\tend",
+		"description": "Lua Method for Class",
+		"scope": "source.lua"
+	}
+	"class.var":{
+		"prefix": "class.var",
+		"body": "\tlocal ${1:Var_Name} = ${2:Table/Number/String} ;",
+		"description": "Lua Method for Class",
+		"scope": "source.lua"
+	}
+	"var":{
+		"prefix": "var",
+		"body": "local ${1:Var_Name} = ${2:Table/Number/String} ;",
+		"description": "Variable",
+		"scope": "source.lua"
+	}
+}
